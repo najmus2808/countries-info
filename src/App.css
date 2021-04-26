@@ -1,7 +1,3 @@
 .container{
   display:flex;
 }
-.cart{
-  position: sticky;
-  top: 0;
-}

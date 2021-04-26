@@ -12,20 +12,20 @@ const App = () => {
       .then(data => setCountries(data));
   }, [])
 
-  const handleCart =(addCountry)=>{
+  const handleCart = (addCountry) => {
     let newCountry = [...country, addCountry];
     setCountry(newCountry);
   }
   return (
     <div className="container">
-     <div>
-     {
-       countries.map(country => <Country country={country} key={country.alpha2Code} handleCart={handleCart}></Country>)
-     }
-     </div>
-     <div className="cart"> 
-     <Cart country={country}></Cart>
-     </div>
+      <div>
+        {
+          countries.map(country => <Country country={country} key={country.alpha2Code} handleCart={handleCart}></Country>)
+        }
+      </div>
+      <div className="cart">
+        <Cart country={country}></Cart>
+      </div>
     </div>
   );
 };
